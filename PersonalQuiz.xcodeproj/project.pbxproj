@@ -13,6 +13,7 @@
 		BAF6BF402857BD0E009A2A1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF6BF3E2857BD0E009A2A1B /* Main.storyboard */; };
 		BAF6BF422857BD0F009A2A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF6BF412857BD0F009A2A1B /* Assets.xcassets */; };
 		BAF6BF452857BD0F009A2A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF6BF432857BD0F009A2A1B /* LaunchScreen.storyboard */; };
+		BAF6BF512857BE5E009A2A1B /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6BF502857BE5E009A2A1B /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAF6BF412857BD0F009A2A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAF6BF442857BD0F009A2A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAF6BF462857BD0F009A2A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAF6BF502857BE5E009A2A1B /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		BAF6BF372857BD0E009A2A1B /* PersonalQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				BAF6BF382857BD0E009A2A1B /* AppDelegate.swift */,
-				BAF6BF3A2857BD0E009A2A1B /* SceneDelegate.swift */,
-				BAF6BF3C2857BD0E009A2A1B /* ViewController.swift */,
-				BAF6BF3E2857BD0E009A2A1B /* Main.storyboard */,
-				BAF6BF412857BD0F009A2A1B /* Assets.xcassets */,
-				BAF6BF432857BD0F009A2A1B /* LaunchScreen.storyboard */,
-				BAF6BF462857BD0F009A2A1B /* Info.plist */,
+				BAF6BF522857BE71009A2A1B /* Models */,
+				BAF6BF4F2857BDDE009A2A1B /* ViewControllers */,
+				BAF6BF4C2857BD9B009A2A1B /* Storyboards */,
+				BAF6BF4E2857BDD3009A2A1B /* App */,
+				BAF6BF4D2857BDC3009A2A1B /* Resources */,
 			);
 			path = PersonalQuiz;
+			sourceTree = "<group>";
+		};
+		BAF6BF4C2857BD9B009A2A1B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BAF6BF3E2857BD0E009A2A1B /* Main.storyboard */,
+				BAF6BF432857BD0F009A2A1B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BAF6BF4D2857BDC3009A2A1B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BAF6BF412857BD0F009A2A1B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BAF6BF4E2857BDD3009A2A1B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAF6BF382857BD0E009A2A1B /* AppDelegate.swift */,
+				BAF6BF3A2857BD0E009A2A1B /* SceneDelegate.swift */,
+				BAF6BF462857BD0F009A2A1B /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BAF6BF4F2857BDDE009A2A1B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAF6BF3C2857BD0E009A2A1B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BAF6BF522857BE71009A2A1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAF6BF502857BE5E009A2A1B /* Questions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF6BF3D2857BD0E009A2A1B /* ViewController.swift in Sources */,
+				BAF6BF512857BE5E009A2A1B /* Questions.swift in Sources */,
 				BAF6BF392857BD0E009A2A1B /* AppDelegate.swift in Sources */,
 				BAF6BF3B2857BD0E009A2A1B /* SceneDelegate.swift in Sources */,
 			);
@@ -291,10 +335,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBC2FW8GZY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PersonalQuiz;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +365,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBC2FW8GZY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PersonalQuiz;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
