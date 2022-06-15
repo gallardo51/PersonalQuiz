@@ -30,10 +30,10 @@ class QuestionsViewController: UIViewController {
     }
     
     private let questions = Question.getQuestions()
-private var answerChosen: [Answer] = []
-private var currentAnswers: [Answer] {
-    questions[questionIndex].answers
-}
+    private var answerChosen: [Answer] = []
+    private var currentAnswers: [Answer] {
+        questions[questionIndex].answers
+    }
     private var questionIndex = 0
     
     override func viewDidLoad() {
@@ -42,10 +42,26 @@ private var currentAnswers: [Answer] {
     }
     
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[buttonIndex]
+        answerChosen.append(currentAnswer)
+        
+        nextQuestion()
     }
+
     @IBAction func multipleAnswerButtonPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answerChosen.append(answer)
+            }
+        }
+        
+        nextQuestion()
     }
     @IBAction func rangedAnswerButtonPressed() {
+        let index = lrintf(rangedSlider.value)
+        answerChosen.append(currentAnswers[index])
+        nextQuestion()
     }
 }
 
@@ -79,7 +95,7 @@ extension QuestionsViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
