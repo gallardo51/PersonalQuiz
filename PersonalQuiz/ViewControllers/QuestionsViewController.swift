@@ -130,6 +130,6 @@ extension QuestionsViewController {
             return
     }
         
-        performSegue(withIdentifier: "showResult", sender: nil)
+        performSegue(withIdentifier: "showResults", sender: nil)
     }
 }
