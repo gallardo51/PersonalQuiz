@@ -278,10 +278,10 @@
                         <outletCollection property="singleButtons" destination="DXk-N2-H9U" collectionClass="NSMutableArray" id="1O9-Zc-Qad"/>
                         <outletCollection property="singleButtons" destination="TMb-JZ-3qR" collectionClass="NSMutableArray" id="JXZ-BI-5Id"/>
                         <outletCollection property="singleButtons" destination="KHK-Tr-aeK" collectionClass="NSMutableArray" id="LSN-Ec-dF3"/>
-                        <outletCollection property="multipleLabel" destination="XTw-n6-zGf" collectionClass="NSMutableArray" id="PoJ-AT-18K"/>
-                        <outletCollection property="multipleLabel" destination="xbc-J8-1QC" collectionClass="NSMutableArray" id="SK0-xT-wIm"/>
-                        <outletCollection property="multipleLabel" destination="IuJ-Cj-7UA" collectionClass="NSMutableArray" id="OVs-2f-gVL"/>
-                        <outletCollection property="multipleLabel" destination="JBA-rJ-42d" collectionClass="NSMutableArray" id="FMU-Ug-36L"/>
+                        <outletCollection property="multipleLabels" destination="XTw-n6-zGf" collectionClass="NSMutableArray" id="PoJ-AT-18K"/>
+                        <outletCollection property="multipleLabels" destination="xbc-J8-1QC" collectionClass="NSMutableArray" id="SK0-xT-wIm"/>
+                        <outletCollection property="multipleLabels" destination="IuJ-Cj-7UA" collectionClass="NSMutableArray" id="OVs-2f-gVL"/>
+                        <outletCollection property="multipleLabels" destination="JBA-rJ-42d" collectionClass="NSMutableArray" id="FMU-Ug-36L"/>
                         <outletCollection property="multipleSwitches" destination="d4p-Gc-zxf" collectionClass="NSMutableArray" id="OLq-Zn-DJx"/>
                         <outletCollection property="multipleSwitches" destination="w7u-SE-Fil" collectionClass="NSMutableArray" id="0nG-ea-wIg"/>
                         <outletCollection property="multipleSwitches" destination="aR0-nO-iZX" collectionClass="NSMutableArray" id="9Y9-5V-njQ"/>
