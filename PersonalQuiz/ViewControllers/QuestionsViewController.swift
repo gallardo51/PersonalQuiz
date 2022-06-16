@@ -9,6 +9,8 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    //MARK: - IB Outlets
+    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionProgressView: UIProgressView!
     
@@ -28,6 +30,8 @@ class QuestionsViewController: UIViewController {
             rangedSlider.value = answerCount / 2
         }
     }
+    
+    //MARK: - Private properties
     
     private let questions = Question.getQuestions()
     private var answerChosen: [Answer] = []
@@ -59,6 +63,7 @@ class QuestionsViewController: UIViewController {
         resultVC.answers = answerChosen
     }
     
+    //MARK: - Actions
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
