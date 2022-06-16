@@ -88,7 +88,7 @@
         <!--QuestionsViewController-->
         <scene sceneID="gGw-Jm-6DI">
             <objects>
-                <viewController title="QuestionsViewController" id="2Gd-Be-vrJ" customClass="QuestionsViewController" sceneMemberID="viewController">
+                <viewController title="QuestionsViewController" id="2Gd-Be-vrJ" customClass="QuestionsViewController" customModule="PersonalQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdE-Jd-WX6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,11 +239,8 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kJG-V2-3fk">
                                 <rect key="frame" x="0.0" y="91" width="320" height="4"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoY-f4-ptc">
-                                <rect key="frame" x="16" y="103" width="288" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3i3-nz-1MZ"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoY-f4-ptc">
+                                <rect key="frame" x="16" y="103" width="288" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -259,23 +256,17 @@
                             <constraint firstItem="Y4z-8i-Wga" firstAttribute="leading" secondItem="oFS-kO-sNu" secondAttribute="leading" constant="16" id="Cm1-c1-oOa"/>
                             <constraint firstItem="BsC-QI-yKV" firstAttribute="centerY" secondItem="cdE-Jd-WX6" secondAttribute="centerY" id="EgU-3M-XFS"/>
                             <constraint firstItem="oFS-kO-sNu" firstAttribute="trailing" secondItem="kJG-V2-3fk" secondAttribute="trailing" id="FhA-va-5uu"/>
-                            <constraint firstItem="eoY-f4-ptc" firstAttribute="leading" secondItem="oFS-kO-sNu" secondAttribute="leading" constant="16" id="KLW-Ig-yJB"/>
+                            <constraint firstItem="oFS-kO-sNu" firstAttribute="trailing" secondItem="eoY-f4-ptc" secondAttribute="trailing" constant="16" id="Mt9-Np-BKe"/>
                             <constraint firstItem="eoY-f4-ptc" firstAttribute="top" secondItem="kJG-V2-3fk" secondAttribute="bottom" constant="8" symbolic="YES" id="Wkd-yb-iBw"/>
                             <constraint firstItem="kJG-V2-3fk" firstAttribute="leading" secondItem="oFS-kO-sNu" secondAttribute="leading" id="Wso-Md-PFC"/>
+                            <constraint firstItem="eoY-f4-ptc" firstAttribute="leading" secondItem="oFS-kO-sNu" secondAttribute="leading" constant="16" id="Zcl-sd-aqR"/>
                             <constraint firstItem="kJG-V2-3fk" firstAttribute="top" secondItem="oFS-kO-sNu" secondAttribute="top" id="bev-sg-6Q8"/>
                             <constraint firstItem="CKf-28-IVm" firstAttribute="centerY" secondItem="cdE-Jd-WX6" secondAttribute="centerY" id="k4b-Wh-sdA"/>
                             <constraint firstItem="oFS-kO-sNu" firstAttribute="trailing" secondItem="Y4z-8i-Wga" secondAttribute="trailing" constant="16" id="piH-Ol-38A"/>
                             <constraint firstItem="oFS-kO-sNu" firstAttribute="trailing" secondItem="CKf-28-IVm" secondAttribute="trailing" constant="16" id="soa-6I-0l8"/>
-                            <constraint firstItem="oFS-kO-sNu" firstAttribute="trailing" secondItem="eoY-f4-ptc" secondAttribute="trailing" constant="16" id="w1X-BD-nBT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Вопрос №" id="L5b-Yy-usv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Qwv-HO-AFN">
-                            <connections>
-                                <segue destination="hcU-VL-GPS" kind="show" id="RLc-di-kTn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Вопрос №" id="L5b-Yy-usv"/>
                     <connections>
                         <outlet property="multipleStackView" destination="BsC-QI-yKV" id="c0K-Zg-zn1"/>
                         <outlet property="questionLabel" destination="eoY-f4-ptc" id="ZnJ-ze-MK8"/>
@@ -350,6 +341,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="animalLabel" destination="dPR-Ff-eyF" id="brt-nK-zbn"/>
+                        <outlet property="descriptionLabel" destination="H2B-Ry-0bB" id="RTw-1a-lpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo1-TQ-p9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="gzW-1z-Ogz" userLabel="Exit" sceneMemberID="exit"/>
@@ -375,9 +370,6 @@
             <point key="canvasLocation" x="765" y="82"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aAM-z1-fVQ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
