@@ -36,9 +36,27 @@ class QuestionsViewController: UIViewController {
     }
     private var questionIndex = 0
     
+    //MARK: - Background color change
+      private let firstColor = UIColor(
+          red: 200/255,
+          green: 100/255,
+          blue: 180/255,
+          alpha: 1)
+      private let secondColor = UIColor(
+          red: 150/255,
+          green: 250/255,
+          blue: 170/255,
+          alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer(topColor: firstColor, bottomColor: secondColor)
         updateUI()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultViewController else { return }
+        resultVC.answers = answerChosen
     }
     
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
